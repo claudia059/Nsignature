@@ -11,10 +11,10 @@ export default function Browse() {
     searchQuery: '',
     minPrice: 0,
     maxPrice: 10000000,
-    beds: null,
-    baths: null,
-    propertyType: null,
-    city: null,
+    beds: null as number | null,
+    baths: null as number | null,
+    propertyType: null as string | null,
+    city: null as string | null,
   })
 
   const [sortBy, setSortBy] = useState('recent')
