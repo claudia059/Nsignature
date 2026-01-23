@@ -1,26 +1,232 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
+
+/* Property Card Styles */
+.property-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Navigation Styles */
+.navbar {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Sticky Top Adjustment */
+/* .sticky-top {
+  top: 60px;
+} */
+
+/* Hero Section */
+.bg-primary {
+  /* background: linear-gradient(135deg, #001962 0%, #001862cf 100%) !important; */
+  color: #e9ecef!important;
+}
+
+/* Min Height Utilities */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* Utility for image containers */
+.property-image-container {
+  position: relative;
+  overflow: hidden;
+  background: #e9ecef;
+}
+
+/* Badge Styles */
+.badge {
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #dee2e6;
+  margin-top: auto;
+}
+
+/* Responsive Image */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Input Focus Styles */
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Button Hover */
+.btn-primary:hover {
+  background-color: #0a58ca;
+  border-color: #0a3622;
+}
+
+/* Tab Navigation */
+.nav-tabs .nav-link {
+  color: #6c757d;
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-tabs .nav-link.active {
+  color: #0d6efd;
+  border-color: #0d6efd;
+  background: none;
+}
+
+/* my stayles */
+
+#devtools-indicator{
+  background-color: aqua;
+}
+
+.next-logo{
+  background-color: red;
+  display: none!important;
+}
+
+
+/* hero-bg */
+
+.hero-bg {
+  background-image:linear-gradient(rgba(0,0,0,0.2)), url("../../public/hero_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0a3622!important;
+}
+
+
+.hero-bg-span{
+  background-color: #001962;
+  justify-content: center;
+  display: flex;
+}
+.hero-bg-span span b{
+  color: #bd9154;
+}
+.hero-bg-span a{
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.lead{
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: cursive;
+}
+
+.nav-section{
+  background-color: #001962;
+  color: #e9ecef;
+}
+.nav-section a{
+  color: #e9ecef;
+}
+.nav-section a:hover{
+  color: #9fbfdf;
+}
+
+.footer{
+  background-color: #001962;
+  color: #e9ecef!important;
+}
+
+.footer a{
+  color: #e9ecef;
+}
+.footer a:hover{
+  color: #9fbfdf;
+}
+
+.footer ul li{
+  margin-bottom: 0.5rem;
+  color: #e9ecef!important;
+}
+
+.Search-property{
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .hero-bg {
+    height: 70vh;
+    padding: 0 1rem;
+  }
+
+  .hero-bg .display-4 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+
+  .Search-property{
+    flex-direction: column;
+    margin-top: -1.5rem;
+  }
+
+  .Search-filter{
+    position: static !important;
+  }
+
+  .gapHero{
+    display: block!important;
+    justify-content: space-around;
+  }
+  .gapHero span{
+    margin: 2px;
+  }
+
+  .mostbtn{
+    font-size: 10px!important;
+  }
+
+  .findh{
+    font-size: 30px;
+    padding-top: 50px;
+    box-sizing: border-box;
+  }
+
+}
+
