@@ -521,7 +521,7 @@ export const propertiesDatabase: Property[] = [
     beds: 3,
     baths: 2,
     sqft: 1650,
-    propertyType: 'house',
+    propertyType: 'condo',
     year: 1930,
     imageUrl: 'https://images.unsplash.com/photo-1593696140826-c58b021acf8b?q=80&w=1170&auto=format&fit=crop',
     imageUrls: [
@@ -546,7 +546,7 @@ export const propertiesDatabase: Property[] = [
     beds: 2,
     baths: 1,
     sqft: 980,
-    propertyType: 'house',
+    propertyType: 'condo',
     year: 1978,
     imageUrl: 'https://images.unsplash.com/photo-1721742605864-db0bc36c9d93?q=80&w=1170&auto=format&fit=crop',
     imageUrls: [
